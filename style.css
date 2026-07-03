@@ -1,0 +1,95 @@
+@font-face {
+  font-family: nunito;
+  src: url("./fonts/Nunito-Regular.ttf");
+}
+
+@font-face {
+  font-family: nunito-bold;
+  src: url("./fonts/Nunito-Bold.ttf");
+}
+
+:root {
+  --primary-color: #1b0e20;
+  --secondary-color: #44334a;
+  --primary-mute: #8d77a8;
+  --primary-text: #d1c0ec;
+  --secondary-text: #c4addd;
+
+  --max-width: 1440px;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: var(--primary-text);
+  color: var(--primary-color);
+  font-family: "nunito";
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  height: 48px;
+}
+
+nav {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-content .tabs {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-content .tabs a {
+  /* border: 2px solid red; */
+  padding: 0px 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 60%;
+  text-decoration: none;
+  color: var(--primary-text);
+  font-family: nunito-bold;
+  margin-right: 6px;
+}
+
+.tabs a:not(#brand, .active):hover {
+  background-color: var(--primary-mute);
+  color: var(--secondary-color);
+  border-radius: 30px;
+}
+
+.tabs .active {
+  background-color: var(--primary-text);
+  color: var(--primary-color) !important;
+  border-radius: 30px;
+}
+
+.nav-content .socials {
+  display: flex;
+}
+
+.nav-content .socials a {
+  padding: 0px 8px;
+  display: flex;
+}
+
+.socials svg {
+  fill: var(--primary-text);
+}
